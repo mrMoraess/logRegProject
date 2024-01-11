@@ -2,5 +2,71 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
+    color: #16161d;
 }
 
+:root {
+    --primary-color: #525CEB;
+    --secondary-color: #BFCFE7;
+}
+
+body {
+    background: var(--secondary-color);
+}
+
+.root-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    background: var(--primary-color);
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.header {
+    font-size: 32px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.container-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-style {
+    padding: 5px;
+    margin: 10px 0;
+    width: 90%;
+    font-size: 18px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+.btn {
+    padding: 5px 20px;
+    border: none;
+    font-weight: bold;
+    width: 90%;
+}
+
+.chose-form {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.link-form {
+    font-weight: bold;
+}

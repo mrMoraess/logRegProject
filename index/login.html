@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body> 
-    <form action="" id="login-form" method="post">
-        <h2>Log in</h2>
-        username: <br>
-        <input type="text" name="username" id="input-username"> <br>
-        password: <br>
-        <input type="password" name="password" id="input-password"> <br>
-        <input type="submit" name="login" id="submit-btn" value="login">
-
-        <p>If you don't have an account yet <a href="register.html">click here</a></p>
-    </form>
+    <div class="root-container">
+        <form action="" id="login-form" method="post" class="form">
+            <h2 class="header">Log in</h2>
+            <div class="container-input">
+                <p>username</p>
+                <input type="text" name="username" id="input-username" class="input-style">
+            </div>
+            <div class="container-input">
+                <p>password</p>
+                <input type="password" name="password" id="input-password" class="input-style">
+            </div>
+            <div class="container-input">
+                <input type="submit" name="login" id="submit-btn" value="login" class="input-style btn">
+            </div>
+            <p class="chose-form">If you don't have an account yet <a href="register.html" class="link-form">click here</a></p>
+        </form>
+    </div>
     <script src="validateLogin.js" type="module"></script>
 </body>
 </html>

@@ -4,23 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="" id="my-form" method="post">
-        <h2>Register</h2>
-        username: <br>
-        <input type="text" name="username" id="input-username"> <br>
-        email: <br>
-        <input type="email" name="email" id="input-email"> <br>
-        password: <br>
-        <input type="password" name="password" id="input-pass"> <br>
-        repeat the password: <br>
-        <input type="password" name="repeat-pass" id="input-repetPass"> <br>
-        <input type="submit" name="register" value="register" id="submit-regist">
+    <div class="root-container">
+        <form action="" id="my-form" method="post" class="form">
+            <h2 class="header">Register</h2>
 
-        <p>If you already have an account <a href="login.html">click here</a></p>
-        <i class="fas fa-user"></i>
-    </form>
+            <div class="container-input">
+                username: 
+                <input type="text" name="username" id="input-username" class="input-style"> 
+            </div>
+            <div class="container-input">
+                email: 
+                <input type="email" name="email" id="input-email" class="input-style"> 
+            </div>
+            <div class="container-input">
+                password: 
+                <input type="password" name="password" id="input-pass" class="input-style"> 
+            </div>
+            <div class="container-input">
+                repeat the password: 
+                <input type="password" name="repeat-pass" id="input-repetPass" class="input-style"> 
+            </div>
+            <div class="container-input">
+                <input type="submit" name="register" value="register" id="submit-regist" class="input-style">
+            </div>
+
+            <p class="chose-form">If you already have an account <a href="login.html" class="link-form">click here</a></p>
+        </form>
+    </div>
     <script src="validateForm.js" type="module"></script>
 </body>
 </html>
