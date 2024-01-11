@@ -8,11 +8,7 @@
 
 :root {
     --primary-color: #525CEB;
-    --secondary-color: #BFCFE7;
-}
-
-body {
-    background: var(--secondary-color);
+    --secondary-color: #DCF2F1;
 }
 
 .root-container {
@@ -25,7 +21,7 @@ body {
 }
 
 .form {
-    background: var(--primary-color);
+    background: var(--secondary-color);
     width: auto;
     height: auto;
     padding: 10px;
@@ -56,6 +52,8 @@ body {
 }
 
 .btn {
+    background-color: var(--primary-color);
+    color: white;
     padding: 5px 20px;
     border: none;
     font-weight: bold;
