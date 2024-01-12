@@ -21,10 +21,12 @@
         }
     }
     if ($userFlag && $passFlag) {
-        print true;
-    } elseif (!$passFlag) {
-        print false;
-    } else {
-        print false;
+        print "ok";
+    } elseif (!$passFlag && !$passFlag) {
+        print "Enter valid data";
+    } elseif ($passflag) {
+        print "Invalid username";
+    } elseif ($userFlag) {
+        print "Invalid password";
     }
 ?>

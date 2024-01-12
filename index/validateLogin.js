@@ -1,4 +1,4 @@
-import applyBorder from "./util.js";
+import { applyBorder, message } from "./util.js";
 
 const el = {
     username: document.getElementById("input-username"),
@@ -42,11 +42,12 @@ el.myForm.onsubmit = (e) => {
     xhr.onload = () => {
         console.log("hey" + xhr.response)
         if (xhr.readyState == 4 && xhr.status == 200) {
-            if (xhr.response == 1) {
+            console.log(xhr.response)
+            if (xhr.response === "ok") {
                 // show a success message
-                console.log("Success")
+                message("Login done successfully!", true)
             } else {
-                console.log("Fail.")
+                message(xhr.response, false)
             }
         }
     }

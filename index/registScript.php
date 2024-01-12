@@ -5,8 +5,6 @@
     $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
     $password = filter_var($_POST["password"], FILTER_SANITIZE_SPECIAL_CHARS);
     $repeatPass = filter_var($_POST["repeat-pass"], FILTER_SANITIZE_SPECIAL_CHARS);
-
-    echo $username;
     
     function checkUsername ($username, $conect) {
         $data = mysqli_query($conect, "SELECT * FROM users");
@@ -24,11 +22,11 @@
     }
 
     if (checkUsername($username, $conn)) {
-        print false;
+        print "Username already exist.";
     } else {
         $hash = password_hash($password, PASSWORD_DEFAULT);
         mysqli_query($conn, "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hash')");
 
-        print true;
+        print "ok";
     }
 ?>

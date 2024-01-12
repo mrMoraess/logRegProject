@@ -1,4 +1,4 @@
-import applyBorder from "./util.js";
+import { applyBorder, message } from "./util.js";
 
 const el = {
     email: document.getElementById("input-email"),
@@ -56,9 +56,12 @@ el.myForm.onsubmit = (e) => {
     xhr.onload = () => {
         console.log("hey" + xhr.response)
         if (xhr.readyState == 4 && xhr.status == 200) {
-            if (xhr.response) {
+            console.log(xhr.response)
+            if (xhr.response === "ok") {
                 // show a success message
-                console.log("Sucess")
+                message("Register done successfully!", true)
+            } else {
+                message(xhr.response, false)
             }
         }
     }
